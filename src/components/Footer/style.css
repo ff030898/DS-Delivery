@@ -1,0 +1,21 @@
+.main-footer {
+    background-color: #263238;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-footer p {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.main-footer a img {
+    width: 24px;
+    height: 24px;
+}
