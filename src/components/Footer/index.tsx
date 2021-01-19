@@ -8,8 +8,10 @@ import './style.css';
 function Footer() {
     return (
         <footer className="main-footer">
-            <nav>
-                <p>App desenvolvido durante a 2ª ed. do evento Semana DevSuperior</p>
+            
+            <p>App desenvolvido durante a 2ª ed. do evento Semana DevSuperior</p>
+
+            <nav className="footer-icons">
                 <a href="/">
                     <img src={Youtube} alt="Youtube" />
                 </a>
@@ -20,6 +22,7 @@ function Footer() {
                     <img src={Instagram} alt="Instagram" />
                 </a>
             </nav>
+            
         </footer>
     );
 }

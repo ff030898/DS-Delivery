@@ -1,0 +1,58 @@
+.main-container {
+    width: 100vw;
+    height: calc(100vh - 170px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.grid-container .grid-actions {
+    padding-right: 10px;
+}
+
+.grid-container .grid-actions h1 {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 58px;
+    letter-spacing: -0.015em;
+    color: #263238;
+}
+
+.grid-container .grid-actions h2 {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: #9e9e9e;
+}
+
+.grid-container .grid-actions .btn-order {
+    width: 220px;
+    height: 60px;
+    background-color: #da5c5c;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #fff;
+    outline: 0;
+    border: 0;
+}

@@ -1,0 +1,281 @@
+.main-order-container {
+    max-width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.main-order-container .details-order {
+    height: 133px;
+    background-color: white;
+    padding-left: 220px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-order-container .details-order h1.title-order {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 34px;
+    letter-spacing: -0.015em;
+    color: #da5c5c;
+}
+
+.main-order-container .details-order .etapes-order {
+    margin-left: 100px;
+}
+
+.main-order-container .details-order .etapes-order p {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    margin-top: 22px;
+    color: #9e9e9e;
+}
+
+.main-order-container .details-order .etapes-order p span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: #da5c5c;
+    margin-right: 5px;
+}
+
+.main-order-container .details-order .etapes-order p+p {
+    margin-top: -15px;
+}
+
+.main-order-container .main-items-container {
+    max-width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    padding: 10px 10px 45px 220px;
+}
+
+.main-order-container .main-location-container {
+    width: 79%;
+    height: 537px;
+    margin: 0px 0 40px 220px;
+    padding: 2px 15px 10px 12px;
+    background: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.main-order-container .main-location-container h1 {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #9e9e9e;
+    margin-top: 20px;
+}
+
+.main-location-container .map-container {
+    width: 99, 5%;
+    height: 385px;
+    margin-top: 20px;
+}
+
+.main-location-container .map-container .input-search {
+    min-width: 94%;
+    margin-left: 4%;
+    top: 20px;
+    border-radius: 10px;
+    height: 50px;
+    outline: 0;
+    border: 1px solid #ccc;
+}
+
+.main-order-price-container {
+    max-width: 78%;
+    height: 73px;
+    margin: 0 0 50px 220px;
+    background: #da5c5c;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+.main-order-price-container .order-infomations p.count-products {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 105.18%;
+    /* or 12px */
+    letter-spacing: -0.015em;
+    color: #ffffff;
+    margin-top: 18px;
+}
+
+.main-order-price-container .order-infomations p.count-products span {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+.main-order-price-container .order-infomations p.price {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 105.18%;
+    /* or 12px */
+    letter-spacing: -0.015em;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.main-order-price-container .order-infomations p.price span {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    margin-right: 8px;
+}
+
+.main-order-price-container .btn-order {
+    width: 222px;
+    height: 46px;
+    background: #ffffff;
+    border-radius: 10px;
+    outline: 0;
+    cursor: pointer;
+    border: 0;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #da5c5c;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1800px) {
+    .main-items-container {
+        max-width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        padding: 10px 10px 60px 220px;
+    }
+    .details-order {
+        padding-left: 220px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .main-items-container {
+        max-width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        padding: 10px 10px 60px 120px;
+    }
+    .details-order {
+        padding-left: 120px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-items-container {
+        max-width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        padding: 10px 10px 60px 120px;
+    }
+    .details-order {
+        padding-left: 120px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main-items-container {
+        max-width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        padding: 10px 10px 60px 120px;
+    }
+    .details-order {
+        padding-left: 120px;
+    }
+}
+
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 685px) {
+    .main-items-container {
+        max-width: 100vw;
+        display: grid;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(2, auto);
+        padding: 10px 10px 60px 20px;
+    }
+    .details-order .etapes-order {
+        margin-left: 20px;
+    }
+    .details-order {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 685px) {
+    .main-items-container {
+        max-width: 100vw;
+        display: grid;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(1, auto);
+    }
+    .details-order {
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .details-order h1.title-order {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: -0.015em;
+        color: #da5c5c;
+        margin-bottom: 0;
+    }
+    .details-order .etapes-order {
+        margin-left: 0px;
+    }
+    .details-order .etapes-order p {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        margin-top: 5px;
+        color: #9e9e9e;
+    }
+}

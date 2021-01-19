@@ -1,12 +1,11 @@
+import 'leaflet/dist/leaflet.css';
 import React from 'react';
-import Header from './components/Header';
+import Routes from './router/router';
+
 
 function App() {
   return (
-    <>
-     <Header />
-     {/*<Footer />*/}
-     </>
+    <Routes />
   );
 }
 
