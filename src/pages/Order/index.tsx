@@ -134,7 +134,7 @@ function OrderFood() {
         }
 
         if (!orderLocation || address.label === "Você está aqui") {
-            alert("Selecione o endereço de entrega no mapa abaixo CLICLANDO no marcador dentro do mapa!");
+            alert("Selecione o endereço de entrega no mapa abaixo CLICANDO no marcador dentro do mapa!");
             return;
         }
 
