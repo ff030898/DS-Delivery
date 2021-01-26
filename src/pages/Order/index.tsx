@@ -202,7 +202,7 @@ function OrderFood() {
                     <div className="main-order-price-container">
 
                         <div className="order-infomations">
-                            <p className="count-products"><span>{count}</span>PRODUTOS SELECIONADOS</p>
+                            <p className="count-products"><span>{count}</span>PRODUTO(S) SELECIONADO(S)</p>
                             <p className="price"><span>{formatPrice(sum)}</span>VALOR TOTAL</p>
                         </div>
 

@@ -332,6 +332,12 @@
     text-align: center;
     letter-spacing: -0.015em;
     color: #da5c5c;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.main-order-container .main-order-container-page .main-order-price-container .btn-order:hover {
+    opacity: 1
 }
 
 
@@ -462,5 +468,15 @@
     }
     .main-order-container .main-order-container-page .main-order-price-container .btn-order {
         margin-top: 10px;
+    }
+    .main-order-container .main-order-container-page .main-location-container .map-container .input-search {
+        min-width: 100%;
+        margin-left: -6%;
+        margin-top: 0px;
+        background: none;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
