@@ -4,10 +4,13 @@
     background-color: #f5f5f5;
 }
 
+
+/*SUBHEADER ETAPES CONTAINER*/
+
 .main-order-container .details-order {
     height: 133px;
     background-color: white;
-    padding-left: 220px;
+    padding: 0 10% 0 10%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -48,28 +51,168 @@
     margin-right: 5px;
 }
 
+.main-order-container .details-order .etapes-order p.send-order span.send {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #9e9e9e;
+}
+
 .main-order-container .details-order .etapes-order p+p {
     margin-top: -15px;
 }
 
-.main-order-container .main-items-container {
-    max-width: 80vw;
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    padding: 10px 10px 45px 220px;
+
+/*PRODUCTS CONTAINER*/
+
+.main-order-container .main-order-container-page {
+    max-width: 100%;
+    padding: 0 10% 50px 10%;
+    margin: 0 auto;
+    background-color: #f5f5f5;
 }
 
-.main-order-container .main-location-container {
-    width: 79%;
-    height: 537px;
-    margin: 0px 0 40px 220px;
-    padding: 2px 15px 10px 12px;
+.main-order-container .main-order-container-page .main-items-container ul {
+    list-style: none;
+    display: grid;
+    grid-gap: 20px;
+    margin: 0 0 50px 0;
+    padding: 0;
+}
+
+.main-order-container .main-order-container-page .main-items-container ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*PRODUCT*/
+
+.product-item,
+.product-item-selected {
+    width: 235px;
+    height: 455px;
     background: #ffffff;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    margin-top: 2.4rem;
 }
 
-.main-order-container .main-location-container h1 {
+.product-item:hover,
+.product-item-selected:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.product-item header,
+.product-item-selected header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-item header h1,
+.product-item-selected header h1 {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #da5c5c;
+}
+
+.product-item header img,
+.product-item-selected header img {
+    width: 209px;
+    height: 138px;
+    background: #c4c4c4;
+    border-radius: 10px;
+}
+
+.product-item main,
+.product-item footer,
+.product-item-selected main,
+.product-item-selected footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 5.53%;
+    margin-right: 5.53%;
+}
+
+.product-item main strong,
+.product-item-selected main strong {
+    width: 100%;
+    margin-top: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+    letter-spacing: -0.015em;
+    color: #da5c5c;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.product-item footer h2,
+.product-item-selected footer h2 {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    margin-bottom: 0;
+    color: #9e9e9e;
+}
+
+.product-item footer p,
+.product-item-selected footer p {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.015em;
+    color: #9e9e9e;
+}
+
+
+/*SELECTED*/
+
+.product-item-selected {
+    border: 2px solid #008e5b;
+}
+
+.product-item-selected header h1 {
+    color: #008e5b;
+}
+
+.product-item-selected main strong {
+    color: #008e5b;
+}
+
+
+/*MAP*/
+
+.main-order-container .main-order-container-page .main-location-container {
+    max-width: 100%;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 10px 20px 20px 20px;
+}
+
+.main-order-container .main-order-container-page .main-location-container h1 {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -78,29 +221,54 @@
     text-align: center;
     letter-spacing: -0.015em;
     color: #9e9e9e;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-.main-location-container .map-container {
-    width: 99, 5%;
-    height: 385px;
-    margin-top: 20px;
+.main-order-container .main-order-container-page .main-location-container .map-container {
+    position: relative;
 }
 
-.main-location-container .map-container .input-search {
-    min-width: 94%;
+.main-order-container .main-order-container-page .main-location-container .map-container .input-search {
+    z-index: 1;
+    min-width: 92%;
     margin-left: 4%;
-    top: 20px;
-    border-radius: 10px;
-    height: 50px;
-    outline: 0;
-    border: 1px solid #ccc;
+    margin-top: 10px;
+    background: none;
+    height: 60px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
 }
 
-.main-order-price-container {
-    max-width: 78%;
+.main-order-container .main-order-container-page .main-location-container .map-container .input-search .filter {
+    min-width: 100%;
+    outline: 0;
+    border-radius: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #9e9e9e;
+    mix-blend-mode: normal;
+}
+
+.main-order-container .main-order-container-page .main-location-container .map-container .input-search .filter>div {
+    border-radius: 10px;
+    min-height: 60px;
+}
+
+
+/*PRICE*/
+
+.main-order-container .main-order-container-page .main-order-price-container {
+    max-width: 100%;
     height: 73px;
-    margin: 0 0 50px 220px;
+    margin-top: 30px;
     background: #da5c5c;
     border-radius: 10px;
     display: flex;
@@ -109,7 +277,7 @@
     padding: 0 20px 0 20px;
 }
 
-.main-order-price-container .order-infomations p.count-products {
+.main-order-container .main-order-container-page .main-order-price-container .order-infomations p.count-products {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -121,14 +289,14 @@
     margin-top: 18px;
 }
 
-.main-order-price-container .order-infomations p.count-products span {
+.main-order-container .main-order-container-page .main-order-price-container .order-infomations p.count-products span {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 15px;
     margin-right: 8px;
 }
 
-.main-order-price-container .order-infomations p.price {
+.main-order-container .main-order-container-page .main-order-price-container .order-infomations p.price {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -140,14 +308,14 @@
     margin-top: 5px;
 }
 
-.main-order-price-container .order-infomations p.price span {
+.main-order-container .main-order-container-page .main-order-price-container .order-infomations p.price span {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 19px;
     margin-right: 8px;
 }
 
-.main-order-price-container .btn-order {
+.main-order-container .main-order-container-page .main-order-price-container .btn-order {
     width: 222px;
     height: 46px;
     background: #ffffff;
@@ -169,92 +337,50 @@
 
 /*RESPONSIVE*/
 
-@media screen and (max-width: 1800px) {
-    .main-items-container {
-        max-width: 80vw;
-        display: grid;
-        grid-template-columns: repeat(5, auto);
-        padding: 10px 10px 60px 220px;
+@media screen and (min-width: 1851px) {
+    .main-order-container .main-items-container ul {
+        grid-template-columns: repeat(6, 1fr);
     }
-    .details-order {
-        padding-left: 220px;
+}
+
+@media screen and (max-width: 1850px) {
+    .main-order-container .main-items-container ul {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
 @media screen and (max-width: 1500px) {
-    .main-items-container {
-        max-width: 80vw;
-        display: grid;
-        grid-template-columns: repeat(4, auto);
-        padding: 10px 10px 60px 120px;
-    }
-    .details-order {
-        padding-left: 120px;
+    .main-order-container .main-items-container ul {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .main-items-container {
-        max-width: 80vw;
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        padding: 10px 10px 60px 120px;
-    }
-    .details-order {
-        padding-left: 120px;
+@media screen and (max-width: 1266px) {
+    .main-order-container .main-items-container ul {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (max-width: 900px) {
-    .main-items-container {
-        max-width: 80vw;
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        padding: 10px 10px 60px 120px;
-    }
-    .details-order {
-        padding-left: 120px;
-    }
-}
-
-
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-
-@media screen and (max-width: 685px) {
-    .main-items-container {
-        max-width: 100vw;
-        display: grid;
-        flex-direction: column;
+@media screen and (max-width: 920px) {
+    .main-order-container .main-items-container {
+        display: flex;
+        margin: 0 auto;
+        padding: 0px;
         align-items: center;
         justify-content: center;
-        grid-template-columns: repeat(2, auto);
-        padding: 10px 10px 60px 20px;
     }
-    .details-order .etapes-order {
-        margin-left: 20px;
+    .main-order-container .main-items-container ul {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .details-order {
-        padding-left: 20px;
-    }
-}
-
-@media screen and (max-width: 685px) {
-    .main-items-container {
-        max-width: 100vw;
-        display: grid;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        grid-template-columns: repeat(1, auto);
-    }
-    .details-order {
+    .main-order-container .details-order {
         height: 170px;
         display: flex;
+        padding: 0 10% 0 10%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .details-order h1.title-order {
+    .main-order-container .details-order h1.title-order {
         font-family: "Open Sans", sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -265,10 +391,55 @@
         color: #da5c5c;
         margin-bottom: 0;
     }
-    .details-order .etapes-order {
+    .main-order-container .details-order .etapes-order {
         margin-left: 0px;
     }
-    .details-order .etapes-order p {
+    .main-order-container .details-order .etapes-order p {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        margin-top: 5px;
+        color: #9e9e9e;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .main-order-container .main-items-container {
+        display: flex;
+        margin: 0 auto;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-order-container .main-items-container ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main-order-container .details-order {
+        height: 170px;
+        display: flex;
+        padding: 0 10% 0 10%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-order-container .details-order h1.title-order {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: -0.015em;
+        color: #da5c5c;
+        margin-bottom: 0;
+    }
+    .main-order-container .details-order .etapes-order {
+        margin-left: 0px;
+    }
+    .main-order-container .details-order .etapes-order p {
         font-family: "Open Sans", sans-serif;
         font-style: normal;
         font-weight: normal;
