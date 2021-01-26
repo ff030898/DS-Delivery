@@ -23,10 +23,11 @@ type OrderLocationData = {
     address?: string;
 }
 
-var contador = 0;
-var sum = 0;
 
 function OrderFood() {
+
+    const [count, setCount] = useState(0);
+    const [sum, setSum] = useState(0);
 
     //const [product, setProduct] = useState([]);
 
@@ -75,17 +76,16 @@ function OrderFood() {
         if (alreadySelected >= 0) {
             const filteredItems = selectedProducts.filter(item => item !== id);
             setSelectedProducts(filteredItems);
-            contador = (contador - 1);
-            sum = (sum - price);
+            setCount(count - 1);
+            setSum(sum - price);
 
         } else {
             setSelectedProducts([...selectedProducts, id]);
-            contador = (contador + 1);
-            sum = (sum + price);
+            setCount(count + 1);
+            setSum(sum + price);
+
         }
 
-        console.log("Clicou Mais : " + (contador))
-        console.log("Total : " + (sum))
     }
 
 
@@ -127,19 +127,39 @@ function OrderFood() {
 
         setOrdemLocation(currentPosition);
 
-        console.log("Endereço: " + orderLocation?.address);
 
-        if (contador <= 0) {
-            alert("Nnehum produto foi selecionado!");
+        if (count <= 0) {
+            alert("Nenhum produto foi selecionado!");
             return;
         }
 
-        if (!orderLocation) {
+        if (!orderLocation || address.label === "Você está aqui") {
             alert("Selecione o endereço de entrega no mapa abaixo!");
             return;
         }
 
-        alert("Pedido cadastrado com sucesso! \nEntrega: " + orderLocation?.address);
+        alert("Pedido cadastrado com sucesso! \nEntrega: " + address.label);
+        setCount(0);
+        setSum(0);
+        setSelectedProducts([0]);
+        //recupera localização de usuário
+        navigator.geolocation.getCurrentPosition(async position => {
+
+            const location = position.coords;
+
+            const positionNow: Place = {
+                label: "Você está aqui",
+                value: "Sua localização",
+                position: {
+                    lat: location.latitude,
+                    lng: location.longitude
+                }
+            }
+
+            setAddress(positionNow);
+
+        });
+
     }
 
     const loadOptions = async (inputValue: string, callback: (places: Place[]) => void) => {
@@ -182,7 +202,7 @@ function OrderFood() {
                     <div className="main-order-price-container">
 
                         <div className="order-infomations">
-                            <p className="count-products"><span>{contador}</span>PRODUTOS SELECIONADOS</p>
+                            <p className="count-products"><span>{count}</span>PRODUTOS SELECIONADOS</p>
                             <p className="price"><span>{formatPrice(sum)}</span>VALOR TOTAL</p>
                         </div>
 
@@ -233,7 +253,7 @@ function OrderFood() {
                             <div className="input-search">
 
                                 <AsyncSelect
-                                    placeholder="Pesquisar endereço"
+                                    placeholder="Pesquise o seu endereço e o número para confirmar o destino"
                                     className="filter"
                                     loadOptions={loadOptions}
                                     onChange={value => handleChangeSelect(value as Place)}
